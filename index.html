@@ -38,13 +38,13 @@
 
 						Director de la Agencia para el Desarrollo de la Sociedad de la Información en Bolivia - [ADSIB](http://adsib.gob.bo)
 
-						[@severo_bo](https://twitter.com/severo_bo)
+						Twitter: [@severo_bo](https://twitter.com/severo_bo)
 				</script></section>
 				<section data-markdown><script type="text/template">
 						## Índice
 
-						1. Nuestra infraestructura
-						2. Los proyectos
+						1. La infraestructura de ADSIB y GeoBolivia
+						2. Los proyectos para 2017
 						3. El repositorio estatal de software libre
 				</script></section>
 				<section data-markdown><script type="text/template">
@@ -67,8 +67,8 @@
 						| Infraestructura | Tecnologías |
 						| --- | --- |
 						| servidores | Debian |
-						| registro | Java, Tomcat, PGSQL |
-						| certificación | JBoss, EJBCA, PGSQL |
+						| registro | Java, Tomcat, PostgreSQL |
+						| certificación | JBoss, EJBCA, PostgreSQL |
 
 						Un pedazo no-libre: el controlador del Hardware Security Module (HSM).
 				</script></section>
@@ -103,7 +103,7 @@
 						| Infraestructura | Tecnologías |
 						| --- | --- |
 						| servidores | Debian |
-						| Infraestructura de Datos Espaciales | geOrchestra: GeoServer, GeoNetwork, Tomcat, PGSQL/PostGis |
+						| Infraestructura de Datos Espaciales | geOrchestra: GeoServer, GeoNetwork, Tomcat, PostgreSQL/PostGis |
 						| monitoreo | GeoHealthCheck |
 						| sitio, cursos | SPIP, Moodle |
 				</script></section>
@@ -117,17 +117,17 @@
 						| sistema | Debian |
 						| aplicaciones | LibreOffice, Icedove, Iceweasel, Gajim/Empathy/Pidgin |
 						| Intranet | Owncloud, RoundCube, OpenLDAP, ejabberd |
-						| [¡una maquina Window$!](https://twitter.com/severo_bo/status/804770358071087105) | Facilito para impuestos, VSIAF para activos, SIGMA para personal, EBA para subsidios, biométrico|
+						| [¡una maquina Window$!](https://twitter.com/severo_bo/status/804770358071087105) | Facilito para impuestos, VSIAF para activos, SIGMA para personal, EBA para subsidios, biométrico de marcado, contabilidad BID|
 				</script></section>
 				<section data-markdown><script type="text/template">
 						## ADSIB - sistemas administrativos
 
-						| Desarrollos propios | Tecnologías | Repo SL |
+						| Desarrollos propios | Tecnologías | En Repositorio Estatal SL |
 						| --- | --- | --- |
 						| correspondencia | PHP, MySQL | [si](https://softwarelibre.gob.bo/sistema_descripcion.php?codigo_enviar=yBeJSJMityXIO5M+YICxVITi0gZgufxhZwhN81yC5z814l4g35621al) |
-						| activos fijos y almacenes | Ruby, PGSQL | pronto |
-						| sistema de tareas | Ruby, PGSQL | pronto |
-						| contabilidad | Ruby, PGSQL | no |
+						| activos fijos y almacenes | Ruby, PostgreSQL | pronto |
+						| sistema de tareas | Ruby, PostgreSQL | pronto |
+						| contabilidad | Ruby, PostgreSQL | no |
 						| sitio web | SPIP, MySQL | no |
 				</script></section>
 				<section data-markdown><script type="text/template">
@@ -143,8 +143,63 @@
 						# Proyectos
 				</script></section>
 				<section data-markdown><script type="text/template">
-						## Datos: vida larga
-						<img data-src="imagenes/arnulf.png">
+						## ADSIB - [nic.bo](https://nic.bo)
+
+						| Proyecto / Idea | Descripción |
+						| --- | --- |
+						| tarifas | Nombres de dominio "de interés social" a 55Bs, objetivo: bajar cada año |
+						| nuevos servicios | DNSSEC, DANE, internacionalización IDN, anonimización de datos en WHOIS |
+						| redundancia | anycast, secundarios en otros países, otros software para "resolver" |
+						| estandarización | EPP |
+				</script></section>
+				<section data-markdown><script type="text/template">
+						## ADSIB - [fimadigital.bo](https://firmadigital.bo)
+
+						| Proyecto / Idea | Descripción |
+						| --- | --- |
+						| normativa | un solo tipo de certificado de persona, certificados de firma automática, ¿certificados "SSL"? |
+						| nuevos servicios | sellado de tiempo, agencias de registro, provisión de tokens |
+						| desarrollo de software | firmador común, con tres capas: Java, REST, Javascript - Pronto: desarrollo colaborativo en repositorio de SL |
+				</script></section>
+				<section data-markdown><script type="text/template">
+						## ADSIB - Transversal a los servicios
+
+						| Proyecto / Idea | Descripción |
+						| --- | --- |
+						| modos de pago | tarjeta de crédito, tarjeta de débito, pre-pago, automatizar verificación depósitos en Banco Unión |
+						| clientes | cuenta personal, soporte integrado |
+				</script></section>
+				<section data-markdown><script type="text/template">
+						## ADSIB - Aplicaciones administrativas
+
+						Matar a la última maquina windows!
+
+						| Proyecto / Idea | Descripción |
+						| --- | --- |
+						| biométrico de marcado | aplicar desarrollo de Agetic |
+						| SIGMA, VSIAF | integrados al SIGEP en ¿2017? |
+						| Subsidio, Facilito, Contabilidad BID | Hablar con las entidades: EBA, Impuestos nacionales, BID (ya protestamos oficialmente) |
+				</script></section>
+				<section data-markdown><script type="text/template">
+						## ADSIB - sistemas administrativos
+
+						En conjunto con Agetic, y pronto abierto a desarrollo comunitario en repositorio de SL:
+
+						| Proyecto / Idea | Descripción |
+						| --- | --- |
+						| sistema administrativo | modular, basado en: flujos, documentos, activos, personas, finanzas y planificación |
+				</script></section>
+				<section data-markdown><script type="text/template">
+						# Repositorio Estatal de Software Libre
+				</script></section>
+				<section data-markdown><script type="text/template">
+						## Mejorar el repositorio
+
+						| Proyecto / Idea | Descripción |
+						| --- | --- |
+						| Modularizar | 1. Gitlab a disposición de las entidades públicas, como servicio, 2. Catálogo de sistemas tipo OpenHub |
+						| Colaboraciones | Cada entidad define las condiciones de contribución al proyecto (CONTRIBUTING.md). CTIC dará lineamientos. |
+						| Licencias | ¿traducir y permitir otras licencias? LPG Bolivia evita la privatización |
 				</script></section>
 				<section data-markdown><script type="text/template">
 						# ADSIB
